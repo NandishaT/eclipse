@@ -1,4 +1,4 @@
-package com.xworkz.bean1.thing;
+package com.xworkz.laptop.thing;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -6,24 +6,25 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class NewsPaper {
+
 	@Autowired
-	@Qualifier("no")
+	@Qualifier("NewsPaperno")
 	private int id;
+
 	private String name;
+
 	private String ownerName;
+
 	@Autowired
 	@Qualifier("lang")
 	private String language;
+
 	private double price;
 
 	public NewsPaper(@Qualifier("newsPaperName") String name, @Qualifier("owner") String ownerName) {
 		super();
 		this.name = name;
 		this.ownerName = ownerName;
-	}
-
-	public double getPrice() {
-		return price;
 	}
 
 	@Autowired
@@ -46,6 +47,10 @@ public class NewsPaper {
 
 	public String getLanguage() {
 		return language;
+	}
+
+	public double getPrice() {
+		return price;
 	}
 
 }

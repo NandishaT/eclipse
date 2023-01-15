@@ -1,4 +1,4 @@
-package com.xworkz.bean1.thing;
+package com.xworkz.laptop.thing;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -6,16 +6,22 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class Engine {
+
 	private String name;
+
 	private String type;
+
 	@Autowired
-	@Qualifier("engineNo")
-	private int number;
+	@Qualifier("engineNumber")
+	private int num;
+
 	@Autowired
 	@Qualifier("engineVersion")
 	private double version;
+
 	private String company;
-	private int stroke;
+
+	private int Stroke;
 
 	public Engine(@Qualifier("engineName") String name, @Qualifier("engineType") String type,
 			@Qualifier("engineCompany") String company) {
@@ -23,16 +29,6 @@ public class Engine {
 		this.name = name;
 		this.type = type;
 		this.company = company;
-	}
-
-	public int getStroke() {
-		return stroke;
-	}
-
-	@Autowired
-	@Qualifier("engineStroke")
-	public void setStroke(int stroke) {
-		this.stroke = stroke;
 	}
 
 	public String getName() {
@@ -43,12 +39,26 @@ public class Engine {
 		return type;
 	}
 
-	public int getNumber() {
-		return number;
+	public int getNum() {
+		return num;
+	}
+
+	public double getVersion() {
+		return version;
 	}
 
 	public String getCompany() {
 		return company;
+	}
+
+	@Autowired
+	@Qualifier("engineStroke")
+	public void setStroke(int Stroke) {
+		this.Stroke = Stroke;
+	}
+
+	public int getStroke() {
+		return Stroke;
 	}
 
 }

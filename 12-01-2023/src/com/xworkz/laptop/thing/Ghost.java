@@ -1,4 +1,4 @@
-package com.xworkz.bean1.thing;
+package com.xworkz.laptop.thing;
 
 import java.time.LocalDate;
 
@@ -30,24 +30,6 @@ public class Ghost {
 	@Autowired
 	@Qualifier("ghostEducation")
 	private String education;
-	@Autowired
-	@Qualifier("ghostGradaute")
-	private boolean graduate;
-	@Autowired
-	@Qualifier("ghostCollegeName")
-	private String collegeName;
-	@Autowired
-	@Qualifier("ghostDrinksBlood")
-	private boolean drinksBlood;
-	@Autowired
-	@Qualifier("ghostLivesIn")
-	private String livesIn;
-	@Autowired
-	@Qualifier("ghostScaredOf")
-	private String scaredOf;
-	@Autowired
-	@Qualifier("ghostDangerous")
-	private boolean dangerous;
 
 	public Ghost(@Qualifier("ghostName") String name, @Qualifier("ghostAge") byte age,
 			@Qualifier("ghostHeigth") short height, @Qualifier("ghostWeight") double weight,
@@ -121,30 +103,6 @@ public class Ghost {
 
 	public String getEducation() {
 		return education;
-	}
-
-	public boolean isGraduate() {
-		return graduate;
-	}
-
-	public String getCollegeName() {
-		return collegeName;
-	}
-
-	public boolean isDrinksBlood() {
-		return drinksBlood;
-	}
-
-	public String getLivesIn() {
-		return livesIn;
-	}
-
-	public String getScaredOf() {
-		return scaredOf;
-	}
-
-	public boolean isDangerous() {
-		return dangerous;
 	}
 
 }

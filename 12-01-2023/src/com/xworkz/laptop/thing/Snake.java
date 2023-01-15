@@ -1,4 +1,4 @@
-package com.xworkz.bean1.thing;
+package com.xworkz.laptop.thing;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
