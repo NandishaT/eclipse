@@ -8,18 +8,18 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(loadOnStartup=1,urlPatterns="/ftrack")
+@WebServlet(loadOnStartup=3,urlPatterns="/laptop")
+public class Laptop extends HttpServlet{
 
-public class FastTrackServlet extends HttpServlet {
-	
-	public FastTrackServlet(){
+	public Laptop(){
 		System.out.println("created" +this.getClass().getSimpleName());
+	
 	}
-
+	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		System.out.println("Created FastTrack");
-		
-	}
+		System.out.println("Created Laptop");
+}
 
 }
+

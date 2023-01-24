@@ -8,18 +8,15 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(loadOnStartup=1,urlPatterns="/ftrack")
-
-public class FastTrackServlet extends HttpServlet {
+@WebServlet(loadOnStartup=2,urlPatterns="/titan")
+public class Titan extends HttpServlet{
 	
-	public FastTrackServlet(){
+	public Titan(){
 		System.out.println("created" +this.getClass().getSimpleName());
 	}
-
-	@Override
-	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		System.out.println("Created FastTrack");
-		
+		@Override
+		protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+			System.out.println("Created titan");
 	}
 
 }
